@@ -1,23 +1,11 @@
 import React, { useState } from 'react'
+import MenuItems from '../components/MenuItems'
 
 const Home = () => {
   const [data,setData] = useState(null)
   return (
     <div className='flex w-screen h-screen bg-gray-300 overflow-x-hidden'>
-          <div className='labels'>
-            <div className='labelItem'>All</div>
-            <div className='labelItem'>Pork</div>
-            <div className='labelItem'>Seafood</div>
-            <div className='labelItem'>Chicken</div>
-            <div className='labelItem'>Beef</div>
-            <div className='labelItem'>Vegetarian</div>
-            <div className='labelItem'>Celebrations on Board</div>
-          </div>
-        <div className='items'>
-            <div>Item 1</div>
-            <div>Item 2</div>
-            <div>Item 3</div>
-        </div>
+         <MenuItems data={data} setData={setData} className="flex-shrink-0 max-w-[300px] overflow-y-auto" />
       </div>
   )
 }

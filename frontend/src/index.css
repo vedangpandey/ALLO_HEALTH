@@ -3,8 +3,7 @@
 @tailwind utilities;
 
 body {
-  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
-  background-color: #E8E9EB;;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),url("/bg.png");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
@@ -13,18 +12,14 @@ body {
 .labels{
   background-color: white;
   margin: 10px;
-  height: 20vh;
-  width: 50%;
+  height: fit-content;
+  border-radius: 2%/5%;
+  width: 75%;
   display: flex;
   flex-wrap: wrap;
 }
 
-.items{
-  background-color: white;
-  padding: 10px;
-  margin: 10px;
-  width: 50%;
-}
+
 
 .labels .labelItem{
   padding: 15px;

@@ -13,7 +13,7 @@ function App() {
   return (
     <div>
         <Routes>
-          <Route path='/' element={authUser ? <Home /> : <Navigate to={"/login"} />} ></Route>
+          <Route path='/' element={ <Home />} ></Route>
           </Routes>
           <div className='p-4 h-screen flex items-center justify-center'>
             <Routes>
