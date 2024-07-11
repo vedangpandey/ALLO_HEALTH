@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const Home = () => {
+  const [data,setData] = useState(null)
   return (
-    <div>
+    <div className='flex w-screen h-screen bg-gray-300 overflow-x-hidden'>
           <div className='labels'>
             <div className='labelItem'>All</div>
             <div className='labelItem'>Pork</div>

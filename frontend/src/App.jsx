@@ -1,25 +1,32 @@
 import { useState } from 'react'
 
 import './App.css'
-import { Route, Routes } from 'react-router-dom'
+import { Navigate, Route, Routes } from 'react-router-dom'
 import Home from './page/Home'
 import Login from './page/login/Login'
 import SignUp from './page/signup/SignUp'
+import { useAuthContext } from './context/AuthContext'
+import { Toaster } from 'react-hot-toast'
 
 function App() {
-
+  const { authUser }=useAuthContext();
   return (
-    <>
-    <Routes>
-      <Route path='/' element={<Home />}></Route>
-      <Route path='/login' element={<Login />}></Route>
-      <Route path='/signup' element={<SignUp />}></Route>
-    </Routes>
-      
+    <div>
+        <Routes>
+          <Route path='/' element={authUser ? <Home /> : <Navigate to={"/login"} />} ></Route>
+          </Routes>
+          <div className='p-4 h-screen flex items-center justify-center'>
+            <Routes>
+            <Route path='/login' element={authUser ? <Navigate to='/' /> : <Login />}></Route>
+            <Route path='/signup' element={authUser ? <Navigate to='/' /> : <SignUp />}></Route>
+            
+            </Routes>
+          </div>
+          <Toaster />
       <div>
 
       </div>
-    </>
+    </div>
   )
 }
 
