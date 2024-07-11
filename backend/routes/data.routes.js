@@ -14,7 +14,7 @@ function resolveFile(fpath){
     })
 }
 const dataPath=path.join('dataset','allo-fullstack-Assignment-Dataset.json')
-
+console.log(dataPath);
 router.get('/data',async (req,res)=>{
     try {
         const data=await resolveFile(dataPath)
