@@ -34,3 +34,11 @@ basically generate a string URI and then go to organizations ALLOW ACCESS TO THE
 now make an enviroment  inside backend by the name .env and put the MONGO_URI
 inside that url just specify the database name as `user-meals` and everything is good it should start working
 
+In the End:
+
+`cd backend`
+
+`npm run build`
+
+`npm start`
+
